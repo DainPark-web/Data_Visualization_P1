@@ -23,7 +23,13 @@ const BarChartContainer = () => {
             </Link>
         </nav>
         <div className="barLists">
-            <div>
+            <div className="item">
+                <div className="itemNav">
+                   <div>Bar Chart 01</div>
+                </div>
+                <BarChartA />
+            </div>
+            <div className="item">
                 <div className="itemNav">
                    <div>Bar Chart 01</div>
                 </div>
@@ -64,6 +70,17 @@ const BarChartContainer = () => {
                 justify-content: center;
                 align-items: center;
             } 
+
+            .item{
+                &:last-child{
+                    padding-bottom: 100px;
+                }
+                &:not(:last-child){
+                    margin-bottom: 200px;
+
+
+                }
+            }
             .itemNav{
                 display: flex;
                 padding: 0 100px;
