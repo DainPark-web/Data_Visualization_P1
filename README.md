@@ -11,6 +11,8 @@
 - Chart Entscheidung
 - Visualisierung
 
+### Überlegung🥸
+- Ich benutze jetzt D3JS als JS FORM. Aber brauche ich D3 als REACT FORM zu schreiben? Für mich irgendwie REACT FORM sieht schmutzig aus. Schwierig schnell zu lesen
 
 ### My Github Gist for Data
 [BarChartA](https://gist.githubusercontent.com/DainPark-web/10dd0a710d0c446ae1a0bbad265cbed6/raw/barChartA.csv)
