@@ -9,7 +9,7 @@ const Home = () => {
     <main>
       <div className="title">Data Visualization Project</div>
       <div className="listContainer">
-        <Link href="#">
+        <Link href="/barChart">
           <a className="aLinks" >Bar Chart</a>
         </Link>
         <Link href="/about">
@@ -18,7 +18,7 @@ const Home = () => {
       </div>
       <Link href="/about">
         <a className="infoBtn">
-           <FontAwesomeIcon icon={["fas", "coffee"]} />
+           <FontAwesomeIcon icon={["fas", "circle-question"]} />
         </a>
       </Link>
     </main>
@@ -48,9 +48,12 @@ const Home = () => {
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 2px solid black;
         border-radius: 50%;
+        font-size: 40px;
 
+        &:hover{
+          opacity: 0.4;
+        }
         cursor: pointer;
       }
 
@@ -83,12 +86,13 @@ const Home = () => {
           font-size: 20px;
           font-weight: 500;
           transition: 0.3s ease-in-out;   
-      }
-
-      .aLinks:hover{
+          &:hover{
           color: white;
           background-color: black;
       }
+      }
+
+      
 
       @media screen and (max-width: 600px) {
           main{
