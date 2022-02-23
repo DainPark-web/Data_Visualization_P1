@@ -21,8 +21,9 @@ const BarChartA =() => {
         const svg = d3
         .select("svg")
         .style("background", "orange");
-
-
+        
+        d3.csv("https://gist.githubusercontent.com/DainPark-web/10dd0a710d0c446ae1a0bbad265cbed6/raw/barChartA.csv").then((data) => console.log(data));
+        
 
     },[])
     return (
