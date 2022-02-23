@@ -18,14 +18,14 @@ const BarChartA =() => {
         }
         const WIDTH = svgContainer.current.clientWidth;
         const HEIGHT = svgContainer.current.clientHeight;
-        console.log(data);
+        // console.log(data);
 
         const svg = d3
         .select(svgContainer.current)
         .append("svg")
         .attr("width", WIDTH)
         .attr("height", HEIGHT)
-        .style("background", "orange");
+        // .style("background", "orange");
 
         const mainContainer = svg
         .append("g")

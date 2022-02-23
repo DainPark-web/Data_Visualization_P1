@@ -1,11 +1,14 @@
 // import * as d3 from "d3";
 import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+import Head from "next/head";
 
 const Home = () => {
   return (
     <>
+    <Head>
+      <title>HOME | DATA_VISUALIZATION</title>
+    </Head>
     <main>
       <div className="title">Data Visualization Project</div>
       <div className="listContainer">
