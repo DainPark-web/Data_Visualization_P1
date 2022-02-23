@@ -24,7 +24,7 @@ const BarChartContainer = () => {
         </nav>
         <div className="barLists">
             <div>
-                <div>
+                <div className="itemNav">
                    <div>Bar Chart 01</div>
                 </div>
                 <BarChartA />
@@ -51,7 +51,10 @@ const BarChartContainer = () => {
             }
             .barLists{
                 margin-top: 80px;
+                padding-top:50px;
                 background-color: white;
+                width: 100vw;
+                min-height: 150vh;
             }
             .backBtn{
                 width: 50px;
@@ -61,6 +64,14 @@ const BarChartContainer = () => {
                 justify-content: center;
                 align-items: center;
             } 
+            .itemNav{
+                display: flex;
+                padding: 0 100px;
+                div{
+                    font-size: 25px;
+                    font-weight: 600;
+                }
+            }
 
         `}
         </style>
