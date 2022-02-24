@@ -9,6 +9,7 @@
 - nextjs JSX
 - Sass
 - Tailwind (später)
+- fontawesome
 
 ### Prozess
 - Data Analyse
