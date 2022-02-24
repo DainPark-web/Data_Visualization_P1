@@ -1,5 +1,9 @@
 # Data Visualizatioin Project📊 _ Urlaub Project
 
+<p>
+Das ist ein fun Projekt. Data Visualisierung ist für mich immer noch schwierig. Ich habe wenige Erfahrung darüber, verschiedene Chart zu benutzen. Dafür habe ich geplant, um Data Visualisierung zu üben. 
+</p>
+
 ## Tools
 
 <strong>Main</strong>
