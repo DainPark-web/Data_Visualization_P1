@@ -16,8 +16,8 @@ const BarChartA =() => {
             right: 20,
             bottom: 20,
         }
-        const WIDTH = svgContainer.current.clientWidth * 0.7;
-        const HEIGHT = svgContainer.current.clientHeight * 0.7;
+        const WIDTH = svgContainer.current.clientWidth * (svgContainer.current.clientWidth > 600 ? 0.7 : 1);
+        const HEIGHT = svgContainer.current.clientHeight *(svgContainer.current.clientWidth > 600 ? 0.7 : 1);
         // console.log(data);
 
         const svg = d3
@@ -104,7 +104,7 @@ const BarChartA =() => {
                 height: 100vh;
                 display: flex;
                 justify-content: center;
-                align-items: center;
+                align-items: flex-start;
                
             }
         `}</style>
