@@ -18,6 +18,7 @@
 <strong>Animation</strong>
 
 - Framer Motion
+- GSAP
 
 ## Prozess
 - Data Analyse
