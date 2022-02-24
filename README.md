@@ -1,11 +1,15 @@
 # Data Visualizatioin Project📊 _ Urlaub Project
 
 ### Tools
+
 <strong>Main</strong>
+
 - next.js
 - d3
 - typescript
+
 <strong>Style</strong>
+
 - nextjs JSX
 - Sass
 - Tailwind (später)
