@@ -23,3 +23,4 @@
 
 ### Note 
 - Layout Nextjs Pattern
+- ⭐️Diesmal werde ich nicht Styled-component benutzen. Zuerst schreibe ich mit JSX und danach später mit Tailwind
