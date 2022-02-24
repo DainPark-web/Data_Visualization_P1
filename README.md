@@ -15,6 +15,10 @@
 - Tailwind (später)
 - fontawesome
 
+<strong>Animation</strong>
+
+- Framer Motion
+
 ## Prozess
 - Data Analyse
 - Data Organisierung
