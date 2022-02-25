@@ -1,15 +1,39 @@
 import Head from "next/head";
+import { useEffect } from "react";
 import BarChartA from "../components/barChartA";
+import * as d3 from "d3";
 
 
 
 const BarChartContainer = () => {
+    const pathA = [0, 1];
+    useEffect(() => {
+        let scaleY = d3.scaleLinear().domain([0, 1]).range([0, 500]);
+        const axiosY = d3.axisRight(scaleY);
+        const svg = d3
+        .select(".scrollContainer")
+        // .style("background", "gray");
+
+        const mainG = svg.append("g")
+
+        mainG
+        .append("path")
+        .attr("d", "M0 0, M0 500")
+        .attr("color", "red")
+        .attr("fill", "red")
+        .attr("stroke", "red")
+        .attr("stroke-width", "20")
+
+    },[])
     return (
         <>
         <Head>
             <title>Barchart</title>
         </Head>
         <div className="barLists">
+            <svg className="scrollContainer">
+
+            </svg>
             <div className="item">
                 <div className="itemNav">
                    <div>Bar Chart 01</div>
@@ -27,10 +51,19 @@ const BarChartContainer = () => {
                 background-color: white;
                 width: 100vw;
                 min-height: 150vh;
-
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+            }
+            .scrollContainer{
+                position: fixed;
+                top: 50%;
+                right: 20px;
+                transform: translate(0%, -50%);
+                width: 30px;
+                height: 60vh;
+                z-index: 2;
+              
             }
 
             .item{

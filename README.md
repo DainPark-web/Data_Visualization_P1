@@ -41,5 +41,6 @@ Das ist ein fun Projekt. Data Visualisierung ist für mich immer noch schwierig.
 
 
 ## Note 
+- Korrigieren Path Animation
 - Layout Nextjs Pattern
 - ⭐️Diesmal werde ich nicht Styled-component benutzen. Zuerst schreibe ich mit JSX und danach später mit Tailwind
