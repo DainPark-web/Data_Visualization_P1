@@ -1,6 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
-import Link from "next/link";
 import BarChartA from "../components/barChartA";
 
 

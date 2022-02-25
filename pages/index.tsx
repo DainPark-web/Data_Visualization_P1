@@ -54,9 +54,10 @@ const Home = () => {
 
       @media screen and (max-width: 600px) {
         .listContainer{
+          width: 90vw;
           padding-top: 120px;
           padding-bottom: 60px;
-          grid-template-columns: repeat(1, 1fr);
+          grid-template-columns: repeat(2, 1fr);
         }
       }
       
