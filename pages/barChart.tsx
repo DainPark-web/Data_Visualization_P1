@@ -16,14 +16,11 @@ const BarChartContainer = () => {
                 <div className="itemNav">
                    <div>Bar Chart 01</div>
                 </div>
+                <div className="chartContainer">
                 <BarChartA />
-            </div>
-            <div className="item">
-                <div className="itemNav">
-                   <div>Bar Chart 01</div>
                 </div>
-                <BarChartA />
             </div>
+           
         </div>
         <style jsx>
         {`
@@ -32,25 +29,30 @@ const BarChartContainer = () => {
                 background-color: white;
                 width: 100vw;
                 min-height: 150vh;
-            }
-            .backBtn{
-                width: 50px;
-                height: 50px;
-                color: black;
+
                 display: flex;
-                justify-content: center;
+                flex-direction: column;
                 align-items: center;
-            } 
+            }
 
             .item{
+                width: 70%;
                 &:last-child{
-                    padding-bottom: 100px;
+                   
                 }
                 &:not(:last-child){
-                    margin-bottom: 200px;
+                    margin-bottom: 100px;
 
 
                 }
+            }
+
+            .chartContainer{
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                
             }
             .itemNav{
                 display: flex;

@@ -100,8 +100,8 @@ const BarChartA =() => {
         </div>
         <style jsx>{`
             .svgContainer{
-                width: 100vw;
-                height: 100vh;
+                width: 1200px;
+                height: 800px;
                 display: flex;
                 justify-content: center;
                 align-items: flex-start;
