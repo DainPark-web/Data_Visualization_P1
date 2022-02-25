@@ -12,7 +12,7 @@ const Home = () => {
     </Head>
     <main>
       <div className="listContainer">
-        <ListBox pathName="barChart" listName="Bar" iconT={<FontAwesomeIcon icon={["fas", "chart-bar"]} />} />
+        <ListBox pathName="/barChart/" listName="Bar" iconT={<FontAwesomeIcon icon={["fas", "chart-bar"]} />} />
         <ListBox pathName="pieChart" listName="Pie" iconT={<FontAwesomeIcon icon={["fas", "chart-pie"]} />} />
         <ListBox pathName="lineChart" listName="Line" iconT={<FontAwesomeIcon icon={["fas", "chart-line"]} />} />
         <ListBox pathName="areaChart" listName="Area" iconT={<FontAwesomeIcon icon={["fas", "chart-area"]} />} />

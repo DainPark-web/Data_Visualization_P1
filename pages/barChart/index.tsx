@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useEffect } from "react";
-import BarChartA from "../components/barChartA";
+import BarChartA from "../../components/barChartA";
 import * as d3 from "d3";
 import { motion, useViewportScroll, useTransform, useSpring } from "framer-motion";
 
@@ -92,6 +92,11 @@ const BarChartContainer = () => {
                     <motion.path style={{pathLength: pathLength}} d= {`M ${WIDTH - 20},10 v 500`} className="pathA" />
                 </g>
             </svg>
+            <div className="itemT">
+                <div className="itemNavT">
+                   <div>Bar Chart</div>
+                </div>
+            </div>
             <div className="item">
                 <div className="itemNav">
                    <div>Bar Chart 01</div>
@@ -179,9 +184,29 @@ const BarChartContainer = () => {
                
 
             }
+            .itemT{
+                width: 70vw;
+               
+                &:last-child{
+                   
+                }
+                &:not(:last-child){
+                    margin-bottom: 100px;
+
+
+                }
+            }
+            .itemNavT{
+                display: flex;
+                justify-content: flex-start;
+                div{
+                    font-size: 45px;
+                    font-weight: 600;
+                }
+            }
             .itemNav{
                 display: flex;
-                justify-content: center;
+                justify-content: flex-start;
                 div{
                     font-size: 25px;
                     font-weight: 600;
