@@ -1,6 +1,5 @@
 // import * as d3 from "d3";
 import Link from "next/link";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Head from "next/head";
 
 const Home = () => {
@@ -10,7 +9,6 @@ const Home = () => {
       <title>HOME | DATA_VISUALIZATION</title>
     </Head>
     <main>
-      
       <div className="listContainer">
         <Link href="/barChart">
           <a className="aLinks" >Bar Chart</a>
@@ -19,11 +17,7 @@ const Home = () => {
           <a className="aLinks" >Pie Chart</a>
         </Link>
       </div>
-      <Link href="/about">
-        <a className="infoBtn">
-           <FontAwesomeIcon icon={["fas", "circle-question"]} />
-        </a>
-      </Link>
+     
     </main>
     
     <style jsx>
@@ -42,38 +36,7 @@ const Home = () => {
 
       }
 
-      .titleContainer{
-        width: 100vw;
-        height: 350px;
-        background: #00b4d8;
-        display: flex;
-        padding: 60px;
-      }
-      .title{
-          font-size: calc(3vw + 10px);
-          text-transform: uppercase;
-          font-weight: 600;
-          color: #001219;
-          align-self: center;
-      }
-      .infoBtn{
-        position: absolute;
-        bottom: 40px;
-        right: 40px;
-        width: 50px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        font-size: 40px;
-
-        &:hover{
-          opacity: 0.4;
-        }
-        cursor: pointer;
-      }
-
+     
       
 
       .listContainer{
@@ -107,9 +70,7 @@ const Home = () => {
       
 
       @media screen and (max-width: 600px) {
-          main{
-              /* background: red; */
-          }
+         
          
       }
       
