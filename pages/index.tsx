@@ -10,7 +10,7 @@ const Home = () => {
       <title>HOME | DATA_VISUALIZATION</title>
     </Head>
     <main>
-      <div className="title">Data Visualization Project</div>
+      
       <div className="listContainer">
         <Link href="/barChart">
           <a className="aLinks" >Bar Chart</a>
@@ -31,16 +31,30 @@ const Home = () => {
       main{
         width: 100vw;
         height: 100vh;
-        background: linear-gradient(#eeaeca, #94bbe9);
+        background: white;
 
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 50px;
         position: relative;
 
         flex-direction: column;
 
+      }
+
+      .titleContainer{
+        width: 100vw;
+        height: 350px;
+        background: #00b4d8;
+        display: flex;
+        padding: 60px;
+      }
+      .title{
+          font-size: calc(3vw + 10px);
+          text-transform: uppercase;
+          font-weight: 600;
+          color: #001219;
+          align-self: center;
       }
       .infoBtn{
         position: absolute;
@@ -60,12 +74,7 @@ const Home = () => {
         cursor: pointer;
       }
 
-      .title{
-          font-size: calc(4vw + 10px);
-          text-transform: uppercase;
-          font-weight: 600;
-          color: #001219;
-      }
+      
 
       .listContainer{
           position: absolute;
@@ -101,18 +110,7 @@ const Home = () => {
           main{
               /* background: red; */
           }
-        
-          .listContainer{
-              position: relative;
-              bottom: 0px;
-              left: 0px;
-              margin-top: 50px;
-          
-              /* display: grid; */
-              width: 100%;
-              grid-template-columns: repeat(1, 1fr);
-              grid-gap: 20px;
-          }
+         
       }
       
       
