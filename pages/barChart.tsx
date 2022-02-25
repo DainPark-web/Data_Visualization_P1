@@ -2,31 +2,20 @@ import Head from "next/head";
 import { useEffect } from "react";
 import BarChartA from "../components/barChartA";
 import * as d3 from "d3";
-import { motion, useViewportScroll } from "framer-motion";
+import { motion, useViewportScroll, useTransform, useSpring } from "framer-motion";
 
 
 const BarChartContainer = () => {
-    const { scrollYProgress } = useViewportScroll()
+    const { scrollYProgress } = useViewportScroll();
+    const yRange = useTransform(scrollYProgress, [0, 0.9], [0, 1]);
+    const pathLength = useSpring(yRange, { stiffness: 400, damping: 90 });
+    console.log(pathLength);
     const pathA = [0, 1];
     useEffect(() => {
-        let scaleY = d3.scaleLinear().domain([0, 1]).range([0, 500]);
-        const axiosY = d3.axisRight(scaleY);
-        const svg = d3
-        .select(".scrollContainer")
-        // .style("background", "gray");
+        
+       
 
-        const mainG = svg.append("g")
-
-        mainG
-        .append("motion.path")
-        .attr("d"," M 10,10 v 500")
-        .attr("fill", "none")
-        .attr("stroke", "black")
-        .attr("stroke-width", "4")
-        .attr("pathLength", `${scrollYProgress}`)
-        // .call(axiosY)
-
-    },[])
+    },[yRange])
     return (
         <>
         <Head>
@@ -34,8 +23,34 @@ const BarChartContainer = () => {
         </Head>
         <div className="barLists">
             <svg className="scrollContainer">
-
+                <g>
+                    <motion.path style={{pathLength}} d=" M 10,10 v 500" className="pathA" />
+                </g>
             </svg>
+            <div className="item">
+                <div className="itemNav">
+                   <div>Bar Chart 01</div>
+                </div>
+                <div className="chartContainer">
+                    <BarChartA />
+                </div>
+            </div>
+            <div className="item">
+                <div className="itemNav">
+                   <div>Bar Chart 01</div>
+                </div>
+                <div className="chartContainer">
+                    <BarChartA />
+                </div>
+            </div>
+            <div className="item">
+                <div className="itemNav">
+                   <div>Bar Chart 01</div>
+                </div>
+                <div className="chartContainer">
+                    <BarChartA />
+                </div>
+            </div>
             <div className="item">
                 <div className="itemNav">
                    <div>Bar Chart 01</div>
@@ -80,7 +95,12 @@ const BarChartContainer = () => {
 
                 }
             }
+            .pathA{
+                stroke: black;
+                stroke-width: 4;
+                stroke-linecap: round;
 
+            }
             .chartContainer{
                 width: 100%;
                 height: calc(100vh - 200px);
