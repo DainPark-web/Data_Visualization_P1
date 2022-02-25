@@ -2,10 +2,11 @@ import Head from "next/head";
 import { useEffect } from "react";
 import BarChartA from "../components/barChartA";
 import * as d3 from "d3";
-
+import { motion, useViewportScroll } from "framer-motion";
 
 
 const BarChartContainer = () => {
+    const { scrollYProgress } = useViewportScroll()
     const pathA = [0, 1];
     useEffect(() => {
         let scaleY = d3.scaleLinear().domain([0, 1]).range([0, 500]);
@@ -17,12 +18,13 @@ const BarChartContainer = () => {
         const mainG = svg.append("g")
 
         mainG
-        .append("path")
-        .attr("d", "M0 0, M0 500")
-        .attr("color", "red")
-        .attr("fill", "red")
-        .attr("stroke", "red")
-        .attr("stroke-width", "20")
+        .append("motion.path")
+        .attr("d"," M 10,10 v 500")
+        .attr("fill", "none")
+        .attr("stroke", "black")
+        .attr("stroke-width", "4")
+        .attr("pathLength", `${scrollYProgress}`)
+        // .call(axiosY)
 
     },[])
     return (
