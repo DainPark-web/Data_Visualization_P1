@@ -8,7 +8,9 @@ const Nav = () => {
     return (
         <>
         <div className="navContainer">
-            <div className="title">DATA VISUALISIERUNG</div>
+            <Link href="/">
+                <a className="title">DATA VISUALISIERUNG</a>
+            </Link>
             <Link href="/about">
                 <a className="infoBtn">
                     <div className="infoBtnText">
@@ -59,9 +61,19 @@ const Nav = () => {
                 align-items: center;
                 justify-content: center;
                 padding: 0 50px;
+                transition: 0.2s ease-in-out;
+
+                &:hover{
+                    opacity: 0.7;
+                }
             }
             .infoBtnText{
+                font-family: 'Montserrat', sans-serif;
                 display: block;
+                font-size: 16px;
+                font-weight: 400;
+                color: white;
+                
             }
             .infoBtnIcon{
                 display: none;
