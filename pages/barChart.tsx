@@ -1,32 +1,29 @@
 import Head from "next/head";
 import { useEffect } from "react";
 import BarChartA from "../components/barChartA";
-import * as d3 from "d3";
+
 import { motion, useViewportScroll, useTransform, useSpring } from "framer-motion";
+import Scrollbar from "../components/Scrollbar";
 
 
 const BarChartContainer = () => {
+    const itemAList = ["dain1", "dain2", "dain3", "dain4"];
+
     const { scrollYProgress } = useViewportScroll();
     const yRange = useTransform(scrollYProgress, [0, 0.9], [0, 1]);
     const pathLength = useSpring(yRange, { stiffness: 400, damping: 90 });
-    console.log(pathLength);
-    const test = "royalblue";
-    useEffect(() => {
-        
-       
+   
+    // useEffect(() => {
 
-    },[yRange])
+    // },[yRange]);
+    
     return (
         <>
         <Head>
             <title>Barchart</title>
         </Head>
         <div className="barLists">
-            <svg className="scrollContainer">
-                <g>
-                    <motion.path style={{pathLength}} d=" M 10,10 v 500" className="pathA" />
-                </g>
-            </svg>
+            <Scrollbar itemAList={itemAList} />
             <div className="item">
                 <div className="itemNav">
                    <div>Bar Chart 01</div>
@@ -100,7 +97,8 @@ const BarChartContainer = () => {
                 }
             }
             .pathA{
-                stroke: ${test};
+                pathLength: ${pathLength};
+                stroke: royalblue;
                 stroke-width: 4;
                 stroke-linecap: round;
 
