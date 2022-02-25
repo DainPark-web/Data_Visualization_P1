@@ -10,7 +10,7 @@ const BarChartContainer = () => {
     const yRange = useTransform(scrollYProgress, [0, 0.9], [0, 1]);
     const pathLength = useSpring(yRange, { stiffness: 400, damping: 90 });
     console.log(pathLength);
-    const pathA = [0, 1];
+    const test = "royalblue";
     useEffect(() => {
         
        
@@ -75,12 +75,16 @@ const BarChartContainer = () => {
             .scrollContainer{
                 position: fixed;
                 top: 50%;
-                right: 20px;
+                right: 10px;
                 transform: translate(0%, -50%);
-                width: 30px;
+                width: 14px;
                 height: 60vh;
                 z-index: 2;
-              
+                display: block;
+
+                @media screen and (max-width: 600px) {
+                    display: none;
+            }
             }
 
             .item{
@@ -96,7 +100,7 @@ const BarChartContainer = () => {
                 }
             }
             .pathA{
-                stroke: black;
+                stroke: ${test};
                 stroke-width: 4;
                 stroke-linecap: round;
 
