@@ -17,12 +17,12 @@ const BarChartContainer = () => {
                    <div>Bar Chart 01</div>
                 </div>
                 <div className="chartContainer">
-                <BarChartA />
+                    <BarChartA />
                 </div>
             </div>
            
         </div>
-        <style jsx>
+        <style jsx global>
         {`
             .barLists{
                 padding-top:130px;
@@ -37,6 +37,7 @@ const BarChartContainer = () => {
 
             .item{
                 width: 70vw;
+                height: 100vh;
                 &:last-child{
                    
                 }
@@ -49,9 +50,10 @@ const BarChartContainer = () => {
 
             .chartContainer{
                 width: 100%;
-                height: 100vh;
+                height: calc(100vh - 200px);
                 display: flex;
                 justify-content: center;
+               
 
             }
             .itemNav{
@@ -62,6 +64,13 @@ const BarChartContainer = () => {
                     font-weight: 600;
                 }
             }
+
+            @media screen and (max-width: 600px) {
+                .item{
+                width: 98vw;
+                
+            }
+      }
 
         `}
         </style>
