@@ -11,17 +11,6 @@ const BarChartContainer = () => {
         <Head>
             <title>Barchart</title>
         </Head>
-        <nav>
-            <Link href="/">
-                <a className="backBtn">
-                    <FontAwesomeIcon icon={["fas", "arrow-left"]} />
-                </a>
-            </Link>
-            <div className="title">BAR CHART</div>
-            <Link href="/about">
-                <a>About</a>
-            </Link>
-        </nav>
         <div className="barLists">
             <div className="item">
                 <div className="itemNav">
@@ -38,23 +27,6 @@ const BarChartContainer = () => {
         </div>
         <style jsx>
         {`
-            nav{
-                position: fixed;
-                top:0;
-                left:0;
-                display: flex;
-                width: 100vw;
-                height: 80px;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 80px;
-                padding: 0 50px;
-                background: linear-gradient(0.25turn, #eeaeca, #94bbe9);
-            }
-            .title{
-                font-size: 30px;
-                font-weight: 600;
-            }
             .barLists{
                 margin-top: 80px;
                 padding-top:50px;
