@@ -1,9 +1,9 @@
 import Head from "next/head";
 import { useEffect } from "react";
 import BarChartA from "../components/barChartA";
-
+import * as d3 from "d3";
 import { motion, useViewportScroll, useTransform, useSpring } from "framer-motion";
-import Scrollbar from "../components/Scrollbar";
+
 
 
 const BarChartContainer = () => {
@@ -13,9 +13,73 @@ const BarChartContainer = () => {
     const yRange = useTransform(scrollYProgress, [0, 0.9], [0, 1]);
     const pathLength = useSpring(yRange, { stiffness: 400, damping: 90 });
    
-    // useEffect(() => {
 
-    // },[yRange]);
+    const WIDTH = 400;
+    useEffect(() => {
+
+        const scaleY = d3.scaleLinear().domain([0, itemAList.length -1]).range([10, 510]);
+        const svg = d3
+        .select(".scrollContainer")
+        .style("width", `${WIDTH}`)
+        ;
+        
+        //circle
+        svg
+        .append("g")
+        .classed("circleG", true)
+        .selectAll("g")
+        .data(itemAList)
+        .join("g")
+        .classed("itemcircleG", true)
+        .append("circle")
+        .attr("id", function(d, i) {return i})
+        .attr("cx", `${WIDTH-20}`)
+        .attr("cy", function(d,i) {return scaleY(i)})
+        .attr("r", 4)
+        .attr("fill", "white")
+        .attr("stroke", "royalblue")
+        .attr("stroke-width", "3")
+        .on("mouseenter", (e) => {   
+
+            d3
+            .selectAll(".svgText")
+            .filter(function(d,i){
+       
+                return Number(e.target.id) === i;
+            })
+            .transition()
+            .attr("x", `${WIDTH-70}`)
+            .style("opacity", 1)
+            
+        })
+        .on("mouseleave", (e) => {    
+            d3
+            .selectAll(".svgText")
+            .filter(function(d,i){
+               
+                return Number(e.target.id) === i;
+            })
+            .transition()
+            .attr("x", `${WIDTH-60}`)
+            .style("opacity", 0)
+            
+        })
+
+        //text
+        svg
+        .append("g")
+        .selectAll("text")
+        .data(itemAList)
+        .join("text")
+        .classed("svgText", true)
+        .attr("x", `${WIDTH-60}`)
+        .attr("y",  function(d,i) {return scaleY(i) + 5})
+        .text(function(d){return d})
+        .style("pointer-events", "none")
+        .style("opacity", 0);
+        
+        
+    },[yRange]);
     
     return (
         <>
@@ -23,7 +87,11 @@ const BarChartContainer = () => {
             <title>Barchart</title>
         </Head>
         <div className="barLists">
-            <Scrollbar itemAList={itemAList} />
+            <svg className="scrollContainer">
+                <g>
+                    <motion.path style={{pathLength: pathLength}} d= {`M ${WIDTH - 20},10 v 500`} className="pathA" />
+                </g>
+            </svg>
             <div className="item">
                 <div className="itemNav">
                    <div>Bar Chart 01</div>
@@ -74,7 +142,7 @@ const BarChartContainer = () => {
                 top: 50%;
                 right: 10px;
                 transform: translate(0%, -50%);
-                width: 14px;
+                width: 34px;
                 height: 60vh;
                 z-index: 2;
                 display: block;
