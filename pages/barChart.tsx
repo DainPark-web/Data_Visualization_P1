@@ -36,7 +36,7 @@ const BarChartContainer = () => {
             }
 
             .item{
-                width: 70%;
+                width: 70vw;
                 &:last-child{
                    
                 }
@@ -48,15 +48,15 @@ const BarChartContainer = () => {
             }
 
             .chartContainer{
-                width: 100vw;
+                width: 100%;
                 height: 100vh;
                 display: flex;
                 justify-content: center;
-                
+
             }
             .itemNav{
                 display: flex;
-                padding: 0 100px;
+                justify-content: center;
                 div{
                     font-size: 25px;
                     font-weight: 600;
