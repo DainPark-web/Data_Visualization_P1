@@ -28,8 +28,7 @@ const BarChartContainer = () => {
         <style jsx>
         {`
             .barLists{
-                margin-top: 80px;
-                padding-top:50px;
+                padding-top:130px;
                 background-color: white;
                 width: 100vw;
                 min-height: 150vh;

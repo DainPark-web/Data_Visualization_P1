@@ -16,11 +16,11 @@ const Home = () => {
         <ListBox pathName="pieChart" listName="Pie" iconT={<FontAwesomeIcon icon={["fas", "chart-pie"]} />} />
         <ListBox pathName="lineChart" listName="Line" iconT={<FontAwesomeIcon icon={["fas", "chart-line"]} />} />
         <ListBox pathName="areaChart" listName="Area" iconT={<FontAwesomeIcon icon={["fas", "chart-area"]} />} />
-        <ListBox pathName="scatterChart" listName="Scatter" iconT={<FontAwesomeIcon icon={["fas", "award"]} />} />
-        <ListBox pathName="pyramidChart" listName="Pyramid" iconT={<FontAwesomeIcon icon={["fas", "award"]} />} />
-        <ListBox pathName="networkChart" listName="Network" iconT={<FontAwesomeIcon icon={["fas", "award"]} />} />
-        <ListBox pathName="treeMapChart" listName="Tree Map" iconT={<FontAwesomeIcon icon={["fas", "award"]} />} />
-        <ListBox pathName="chartMixChart" listName="Chart Mix" iconT={<FontAwesomeIcon icon={["fas", "award"]} />} />
+        <ListBox pathName="scatterChart" listName="Scatter" iconT={<FontAwesomeIcon icon={["fas", "ghost"]} />} />
+        <ListBox pathName="pyramidChart" listName="Pyramid" iconT={<FontAwesomeIcon icon={["fas", "ghost"]} />} />
+        <ListBox pathName="networkChart" listName="Network" iconT={<FontAwesomeIcon icon={["fas", "ghost"]} />} />
+        <ListBox pathName="treeMapChart" listName="Tree Map" iconT={<FontAwesomeIcon icon={["fas", "ghost"]} />} />
+        <ListBox pathName="chartMixChart" listName="Chart Mix" iconT={<FontAwesomeIcon icon={["fas", "ghost"]} />} />
        
         
       </div>
@@ -51,15 +51,13 @@ const Home = () => {
 
       }
      
-      
-
-      
-
-      
 
       @media screen and (max-width: 600px) {
-         
-         
+        .listContainer{
+          padding-top: 120px;
+          padding-bottom: 60px;
+          grid-template-columns: repeat(1, 1fr);
+        }
       }
       
       
