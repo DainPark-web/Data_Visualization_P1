@@ -21,6 +21,7 @@ const Home = () => {
         <ListBox pathName="networkChart" listName="Network" iconT={<FontAwesomeIcon icon={["fas", "ghost"]} />} />
         <ListBox pathName="treeMapChart" listName="Tree Map" iconT={<FontAwesomeIcon icon={["fas", "ghost"]} />} />
         <ListBox pathName="chartMixChart" listName="Chart Mix" iconT={<FontAwesomeIcon icon={["fas", "ghost"]} />} />
+        <ListBox pathName="force" listName="Force" iconT={<FontAwesomeIcon icon={["fas", "ghost"]} />} />
        
         
       </div>
