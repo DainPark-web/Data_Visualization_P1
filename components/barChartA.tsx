@@ -9,7 +9,7 @@ const BarChartA =() => {
         const getDataName:any = data.map((e:any) => e.Name.length > 11 ? e.Name.slice(0, 11): e.Name);
         const getMan:number[] = data.map((e:any) => Number((e.Männer).replace(",", ".")));
         const getWoman:any = data.map((e:any) => Number((e.Frauen).replace(",", ".")));
-        console.log(getMan.sort((a,b) => b - a));
+        
         const margin = {
             top: 20,
             left: 20,

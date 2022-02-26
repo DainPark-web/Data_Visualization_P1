@@ -3,8 +3,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 const Nav = () => {
-    const {pathname : urlName} = useRouter();
-    console.log(urlName);
+    // const {pathname : urlName} = useRouter();
+    
     return (
         <>
         <div className="navContainer">
