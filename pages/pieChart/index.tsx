@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import * as d3 from "d3";
 import { motion, useViewportScroll, useTransform, useSpring } from "framer-motion";
 import PieChartA from "../../components/pieChartA";
+import Image from "next/image";
 
 
 
@@ -87,6 +88,13 @@ const PieChartContainer = () => {
             <title>Piechart</title>
         </Head>
         <div className="barLists">
+            <Image
+                src={"/profile.png"}
+                width={500}
+                height={500}
+            >
+
+            </Image>
             <svg className="scrollContainer">
                 <g>
                     <motion.path style={{pathLength: pathLength}} d= {`M ${WIDTH - 20},10 v 500`} className="pathA" />
